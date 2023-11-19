@@ -28,15 +28,15 @@ public class UserService {
     }
 
     public User createUser(User user) {
-    	if (user.getFirstName() == null || user.getFirstName().isEmpty()) {
-            throw new EmptyFirstNameException("First name cannot be empty");
-        }
-    	if (user.getAge() <= 0 || user.getAge()>150) {
-            throw new InvalidAgeException("Invalid Age");
-        }
-    	if (user.getPhoneNumber()!=null || user.getPhoneNumber().length()!=10) {
-    		throw new InvalidMobileNumberException("Phone number should be 10 digits");
-    	}
+//    	if (user.getFirstName() == null || user.getFirstName().isEmpty()) {
+//            throw new EmptyFirstNameException("First name cannot be empty");
+//        }
+//    	if (user.getAge() <= 0 || user.getAge()>150) {
+//            throw new InvalidAgeException("Invalid Age");}
+//        if (user.getPhoneNumber() == null || user.getPhoneNumber().length()>10 || user.getPhoneNumber().length()<10)  {
+//    		throw new InvalidMobileNumberException("Phone number should be 10 digits");
+//    	}
+        
         return userRepository.save(user);
     }
 
